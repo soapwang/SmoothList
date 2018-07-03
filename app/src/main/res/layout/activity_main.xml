@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/addFoodBtn"
+        android:id="@+id/newAsyncActivityBtn"
         android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/decideBtn"
@@ -43,7 +43,7 @@
         android:id="@+id/addFoodText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/addFoodBtn"
+        android:layout_above="@+id/newAsyncActivityBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="12dp"
         android:ems="10"

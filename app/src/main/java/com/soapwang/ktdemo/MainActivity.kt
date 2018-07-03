@@ -19,17 +19,19 @@ class MainActivity : AppCompatActivity() {
 //        foodList.add("Chicken")
         val foodList = arrayListOf<String>("Hamburger", "Noodles", "Chicken")
 
-        addFoodBtn.setOnClickListener({
-            var text = addFoodText.text.toString()
-            if (text.trim() != "") {
-                foodList.add(text)
-                addFoodText.setText("")
-                Toast.makeText(this, "New food added!", Toast.LENGTH_SHORT).show()
-                println("Add new food: $text")
-                println(foodList)
-            } else {
-                addFoodText.setText("")
-            }
+        newAsyncActivityBtn.setOnClickListener({
+            var intent = Intent(this, AsyncListActivity::class.java)
+            startActivity(intent)
+//            var text = addFoodText.text.toString()
+//            if (text.trim() != "") {
+//                foodList.add(text)
+//                addFoodText.setText("")
+//                Toast.makeText(this, "New food added!", Toast.LENGTH_SHORT).show()
+//                println("Add new food: $text")
+//                println(foodList)
+//            } else {
+//                addFoodText.setText("")
+//            }
         })
 
         decideBtn.setOnClickListener({
@@ -42,5 +44,6 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, ListActivity::class.java)
             startActivity(intent)
         })
+
     }
 }
